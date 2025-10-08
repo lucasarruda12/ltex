@@ -5,7 +5,10 @@
 % bit smaller and easier to add to.
 % ====
 % And then modified by Lucas (in October 7, 2025) 
-% to work with pdftex :D
+% to work with pdftex/luatex :D
+
+\def\pdfcolorstackinit {\pdffeedback colorstackinit}
+\protected\def\pdfcolorstack {\pdfextension colorstack}
 
 \newcount\colorRegCount
 \colorRegCount=\pdfcolorstackinit {0 g 0 G}
