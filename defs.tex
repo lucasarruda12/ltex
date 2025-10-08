@@ -1,0 +1,74 @@
+% \usepackage{amsmath}
+% \usepackage{amsthm}
+% \usepackage{amssymb}
+% \usepackage{xcolor}
+\input color
+
+% Common commands that i expect to share between every file
+
+% Set-centric notation
+\def\singleton#1{\{{#1}\}}
+\def\set#1#2{\{{#1} \; | \; {#2}\}}
+% \newcommand{\inter}{\cap}
+% \newcommand{\union}{\cup}
+% \newcommand{\Union}[2]{\bigcup _{#1} #2}
+% \newcommand{\Inter}[2]{\bigcap _{#1} #2}
+% \renewcommand{\subset}{\subseteq}
+% 
+% % Structures
+% \newcommand{\nats}{\mathbb N}
+% \newcommand{\ints}{\mathbb Z}
+% \newcommand{\rats}{\mathbb Q}
+% \newcommand{\reals}{\mathbb R}
+% \newcommand{\bool}{\mathbb B}
+% \newcommand{\group}{\mathcal G}
+% 
+% % Misc
+% \newcommand{\struct}[1]{\ensuremath{\langle#1\rangle}}
+% \newcommand{\type}{\ensuremath{\,:\,}}
+% \newcommand{\powerset}[1]{\ensuremath{\mathcal P(#1)}}
+% \newcommand{\proves}{\ensuremath{\vdash}}
+% \newcommand{\defeq}{\ensuremath{\stackrel {\tiny{def}} =}}
+% \newcommand{\inv}{\ensuremath{^{-1}}}
+% 
+% % Notetaking-environment
+% \newcommand{\todo}[1]{{\noindent\color{red}\colorbox{yellow}{#1}}}
+% \newcommand{\comment}[1]{{\noindent\color{red}*#1}}
+% \newcommand{\meta}[1]{{\noindent\color{blue}*#1}}
+% 
+% \newcommand{\materia}[1]{
+%     \section*{#1}
+%     \addcontentsline{toc}{section}{#1}
+% }
+% \newcommand{\aula}[1]{
+%   {\color{blue}
+%   \subsection*{#1}
+%   \par\noindent\rule{\textwidth}{0.4pt}
+%   }
+% }
+% \newcommand{\topico}[1]{
+%   \subsection*{#1}
+%   \addcontentsline{toc}{subsection}{#1}
+% }
+% 
+% \theoremstyle{note}
+% \newtheorem*{defn}{Def}
+% \newtheorem*{rem}{$\rightarrow$}
+% 
+% \newtheoremstyle{qst}%
+%   {10pt}   % Space above
+%   {10pt}   % Space below
+%   {\color{blue}\normalfont}  % Body font
+%   {}     % Indent amount
+%   {\color{blue}\bfseries} % Theorem head font (red + bold)
+%   {.}    % Punctuation after theorem head
+%   {0.5em}% Space after theorem head
+%   {\thmname{#1}\thmnote{#3}}% Theorem head spec
+% 
+% \theoremstyle{plain}
+% \newtheorem*{lemma}{Lemma}
+% 
+% \theoremstyle{qst}
+% \newtheorem*{question}{}
+% \newtheorem*{subquestion}{}
+% % each file should have some more specific commands

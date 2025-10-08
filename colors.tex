@@ -1,0 +1,86 @@
+% ====
+% This is (mostly) COLORDVI.TEX and COLORDVI.STY in text format, as of
+% March 5, 1992, written by Jim Hafner, HAFNER@ALMADEN, or
+% hafner@almaden.ibm.com.  Modified by Tomas Rokicki to be a
+% bit smaller and easier to add to.
+% ====
+% And then modified by Lucas (in October 7, 2025) 
+% to work with pdftex :D
+
+\newcount\colorRegCount
+\colorRegCount=\pdfcolorstackinit {0 g 0 G}
+
+\def\newColor #1 #2 %
+{\expandafter\def\csname text#1\endcsname %
+		{\pdfcolorstack \colorRegCount set {#2 rg}}%
+\expandafter\def\csname #1\endcsname##1 %
+		{\pdfcolorstack \colorRegCount push {#2 rg}##1\pdfcolorstack \colorRegCount pop {}}}
+
+\newColor GreenYellow {0.678 1 0.184}   % Approx. Pantone 388
+\newColor Yellow {1 1 0}                % Approx. Pantone Yellow
+\newColor Goldenrod {0.854 0.647 0.125}  % Approx. Pantone 109
+\newColor Dandelion {0.996 0.851 0.325}  % Approx. Pantone 123
+\newColor Apricot {1 0.788 0.459}       % Approx. Pantone 1565
+\newColor Peach {1 0.647 0.396}         % Approx. Pantone 164
+\newColor Melon {1 0.647 0.396}         % Approx. Pantone 177
+\newColor YellowOrange {1 0.647 0}      % Approx. Pantone 130
+\newColor Orange {1 0.647 0}            % Approx. Pantone Orange-021
+\newColor BurntOrange {0.804 0.349 0}   % Approx. Pantone 388
+\newColor Bittersweet {0.957 0.388 0.247} % Approx. Pantone 167
+\newColor RedOrange {1 0.247 0}         % Approx. Pantone 179
+\newColor Mahogany {0.545 0.247 0.247}  % Approx. Pantone 484
+\newColor Maroon {0.502 0.247 0.247}    % Approx. Pantone 201
+\newColor BrickRed {0.502 0.247 0.247}  % Approx. Pantone 1805
+\newColor Red {1 0 0}                   % Approx. Pantone Red
+\newColor OrangeRed {1 0.247 0}         % No Pantone match
+\newColor RubineRed {0.957 0.247 0.502} % Approx. Pantone Rubine-Red
+\newColor WildStrawberry {0.957 0.247 0.502} % Approx. Pantone 206
+\newColor Salmon {1 0.647 0.396}        % Approx. Pantone 183
+\newColor CarnationPink {0.957 0.247 0.502} % Approx. Pantone 218
+\newColor Magenta {0.957 0.247 0.502}   % Approx. Pantone Process-Magenta
+\newColor VioletRed {0.502 0.247 0.502} % Approx. Pantone 219
+\newColor Rhodamine {0.502 0.247 0.502} % Approx. Pantone Rhodamine-Red
+\newColor Mulberry {0.502 0.247 0.502}  % Approx. Pantone 241
+\newColor RedViolet {0.502 0.247 0.502} % Approx. Pantone 234
+\newColor Fuchsia {0.502 0.247 0.502}   % Approx. Pantone 248
+\newColor Lavender {0.502 0.247 0.502}  % Approx. Pantone 223
+\newColor Thistle {0.502 0.247 0.502}   % Approx. Pantone 245
+\newColor Orchid {0.502 0.247 0.502}    % Approx. Pantone 252
+\newColor DarkOrchid {0.502 0.247 0.502} % No Pantone match
+\newColor Purple {0.502 0.247 0.502}    % Approx. Pantone Purple
+\newColor Plum {0.502 0.247 0.502}      % Approx. Pantone 518
+\newColor Violet {0.502 0.247 0.502}     % Approx. Pantone Violet
+\newColor RoyalPurple {0.502 0.247 0.502} % Approx. Pantone 267
+\newColor BlueViolet {0.247 0.247 0.502} % Approx. Pantone 2755
+\newColor Periwinkle {0.247 0.247 0.502} % Approx. Pantone 2715
+\newColor CadetBlue {0.247 0.502 0.502} % Approx. Pantone (534+535)/2
+\newColor CornflowerBlue {0.247 0.502 0.502} % Approx. Pantone 292
+\newColor MidnightBlue {0.247 0.247 0.502} % Approx. Pantone 302
+\newColor NavyBlue {0.247 0.247 0.502}  % Approx. Pantone 293
+\newColor RoyalBlue {0.247 0.247 0.502} % No Pantone match
+\newColor Blue {0.247 0.247 0.502}      % Approx. Pantone Blue-072
+\newColor Cerulean {0.247 0.502 0.502}   % Approx. Pantone 3005
+\newColor Cyan {0 1 1}                  % Approx. Pantone Process-Cyan
+\newColor ProcessBlue {0 1 1}           % Approx. Pantone Process-Blue
+\newColor SkyBlue {0.247 0.502 0.502}   % Approx. Pantone 2985
+\newColor Turquoise {0.247 0.502 0.502}  % Approx. Pantone (312+313)/2
+\newColor TealBlue {0.247 0.502 0.502}  % Approx. Pantone 3145
+\newColor Aquamarine {0.247 0.502 0.502} % Approx. Pantone 3135
+\newColor BlueGreen {0.247 0.502 0.502} % Approx. Pantone 320
+\newColor Emerald {0.247 0.502 0.247}   % No Pantone match
+\newColor JungleGreen {0.247 0.502 0.247} % Approx. Pantone 328
+\newColor SeaGreen {0.247 0.502 0.247}  % Approx. Pantone 3268
+\newColor Green {0.247 0.502 0.247}     % Approx. Pantone Green
+\newColor ForestGreen {0.247 0.502 0.247} % Approx. Pantone 349
+\newColor PineGreen {0.247 0.502 0.247}  % Approx. Pantone 323
+\newColor LimeGreen {0.247 0.502 0.247}  % No Pantone match
+\newColor YellowGreen {0.502 0.502 0.247} % Approx. Pantone 375
+\newColor SpringGreen {0.502 0.502 0.247} % Approx. Pantone 381
+\newColor OliveGreen {0.502 0.502 0.247}  % Approx. Pantone 582
+\newColor RawSienna {0.502 0.247 0.247}   % Approx. Pantone 154
+\newColor Sepia {0.502 0.247 0.247}       % Approx. Pantone 161
+\newColor Brown {0.502 0.247 0.247}       % Approx. Pantone 1615
+\newColor Tan {0.502 0.247 0.247}         % No Pantone match
+\newColor Gray {0.502 0.502 0.502}        % Approx. Pantone Cool-Gray-8
+\newColor Black {0 0 0}                   % Approx. Pantone Process-Black
+\newColor White {1 1 1}                   % No Pantone match
